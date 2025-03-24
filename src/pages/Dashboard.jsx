@@ -74,6 +74,27 @@ const Dashboard = () => {
         </button>
       </div>
 
+      {data && (
+        <div className="data-grid">
+          <div className="data-card">
+            <h3>Total Sales</h3>
+            <p>${data.totalSales?.toLocaleString() || '0'}</p>
+          </div>
+          <div className="data-card">
+            <h3>Total Clients</h3>
+            <p>{data.totalClients || '0'}</p>
+          </div>
+          <div className="data-card">
+            <h3>Active Suppliers</h3>
+            <p>{data.activeSuppliers || '0'}</p>
+          </div>
+          <div className="data-card">
+            <h3>Monthly Growth</h3>
+            <p>{data.monthlyGrowth || '0'}%</p>
+          </div>
+        </div>
+      )}
+
       {data ? (
         <div className="charts-container">
           <div className="chart-card large">
