@@ -22,19 +22,19 @@ import "../styles.css";
 const COLORS = ["#2BD1E0", "#FF66B2", "#000000", "#4CAF50", "#FFC107"]; // Extended colors for sales charts
 
 const sampleSalesData = [
-  { month: 'Jan', sales: 4000, target: 3000 },
-  { month: 'Feb', sales: 3000, target: 3000 },
-  { month: 'Mar', sales: 5000, target: 3000 },
-  { month: 'Apr', sales: 2780, target: 3000 },
-  { month: 'May', sales: 1890, target: 3000 },
-  { month: 'Jun', sales: 2390, target: 3000 },
+  { month: "Jan", sales: 4000, target: 3000 },
+  { month: "Feb", sales: 3000, target: 3000 },
+  { month: "Mar", sales: 5000, target: 3000 },
+  { month: "Apr", sales: 2780, target: 3000 },
+  { month: "May", sales: 1890, target: 3000 },
+  { month: "Jun", sales: 2390, target: 3000 },
 ];
 
 const salesByCategory = [
-  { name: 'Electronics', value: 400 },
-  { name: 'Clothing', value: 300 },
-  { name: 'Food', value: 300 },
-  { name: 'Books', value: 200 },
+  { name: "Electronics", value: 400 },
+  { name: "Clothing", value: 300 },
+  { name: "Food", value: 300 },
+  { name: "Books", value: 200 },
 ];
 
 const Dashboard = () => {
@@ -78,19 +78,19 @@ const Dashboard = () => {
         <div className="data-grid">
           <div className="data-card">
             <h3>Total Sales</h3>
-            <p>${data.totalSales?.toLocaleString() || '0'}</p>
+            <p>${data.totalSales?.toLocaleString() || "0"}</p>
           </div>
           <div className="data-card">
             <h3>Total Clients</h3>
-            <p>{data.totalClients || '0'}</p>
+            <p>{data.totalClients || "0"}</p>
           </div>
           <div className="data-card">
             <h3>Active Suppliers</h3>
-            <p>{data.activeSuppliers || '0'}</p>
+            <p>{data.activeSuppliers || "0"}</p>
           </div>
           <div className="data-card">
             <h3>Monthly Growth</h3>
-            <p>{data.monthlyGrowth || '0'}%</p>
+            <p>{data.monthlyGrowth || "0"}%</p>
           </div>
         </div>
       )}
@@ -106,8 +106,18 @@ const Dashboard = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="sales" stroke="#2BD1E0" strokeWidth={2} />
-                <Line type="monotone" dataKey="target" stroke="#FF66B2" strokeWidth={2} />
+                <Line
+                  type="monotone"
+                  dataKey="sales"
+                  stroke="#2BD1E0"
+                  strokeWidth={2}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="target"
+                  stroke="#FF66B2"
+                  strokeWidth={2}
+                />
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -203,7 +213,7 @@ const Dashboard = () => {
         </div>
       ) : (
         <p className="loading-text" style={{ color: "#58C3CD" }}>
-          Loading...
+          Fetching Data...
         </p>
       )}
     </div>
