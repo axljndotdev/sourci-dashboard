@@ -19,7 +19,23 @@ import {
 } from "recharts";
 import "../styles.css";
 
-const COLORS = ["#2BD1E0", "#FF66B2", "#000000"]; // Updated colors
+const COLORS = ["#2BD1E0", "#FF66B2", "#000000", "#4CAF50", "#FFC107"]; // Extended colors for sales charts
+
+const sampleSalesData = [
+  { month: 'Jan', sales: 4000, target: 3000 },
+  { month: 'Feb', sales: 3000, target: 3000 },
+  { month: 'Mar', sales: 5000, target: 3000 },
+  { month: 'Apr', sales: 2780, target: 3000 },
+  { month: 'May', sales: 1890, target: 3000 },
+  { month: 'Jun', sales: 2390, target: 3000 },
+];
+
+const salesByCategory = [
+  { name: 'Electronics', value: 400 },
+  { name: 'Clothing', value: 300 },
+  { name: 'Food', value: 300 },
+  { name: 'Books', value: 200 },
+];
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
@@ -60,6 +76,42 @@ const Dashboard = () => {
 
       {data ? (
         <div className="charts-container">
+          <div className="chart-card">
+            <h3 style={{ color: "#000000" }}>Monthly Sales Performance</h3>
+            <ResponsiveContainer width="100%" height={250}>
+              <LineChart data={sampleSalesData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="sales" stroke="#2BD1E0" strokeWidth={2} />
+                <Line type="monotone" dataKey="target" stroke="#FF66B2" strokeWidth={2} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+
+          <div className="chart-card">
+            <h3 style={{ color: "#000000" }}>Sales by Category</h3>
+            <ResponsiveContainer width="100%" height={250}>
+              <PieChart>
+                <Pie
+                  data={salesByCategory}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  dataKey="value"
+                  label
+                >
+                  {COLORS.map((color, index) => (
+                    <Cell key={`cell-${index}`} fill={color} />
+                  ))}
+                </Pie>
+                <Tooltip />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
           <div className="chart-card">
             <h3 style={{ color: "#000000" }}>Suppliers Distribution</h3>
             <ResponsiveContainer width="100%" height={250}>
