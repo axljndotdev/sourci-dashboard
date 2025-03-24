@@ -223,7 +223,7 @@ h3 {
 }
 
 .dashboard-header svg {
-    margin: 0 auto;
+    margin-right: auto;
 }
 
 .logout-container {
