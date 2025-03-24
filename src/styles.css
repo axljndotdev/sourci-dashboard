@@ -207,9 +207,11 @@ h3 {
     .matrix-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .charts-container {
         grid-template-columns: 1fr;
     }
+
     .chart-card.large {
         grid-column: auto;
     }
