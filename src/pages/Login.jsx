@@ -21,11 +21,26 @@ const Login = () => {
 
   return (
     <Container maxWidth="xs">
-      <Typography variant="h4" align="center" gutterBottom>Login</Typography>
+      <Typography variant="h4" align="center" gutterBottom>
+        Login
+      </Typography>
       <form onSubmit={handleLogin}>
-        <TextField label="Email" fullWidth margin="normal" onChange={(e) => setEmail(e.target.value)} />
-        <TextField label="Password" type="password" fullWidth margin="normal" onChange={(e) => setPassword(e.target.value)} />
-        <Button type="submit" variant="contained" color="primary" fullWidth>Login</Button>
+        <TextField
+          label="Email"
+          fullWidth
+          margin="normal"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <TextField
+          label="Password"
+          type="password"
+          fullWidth
+          margin="normal"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button type="submit" variant="contained" color="primary" fullWidth>
+          Login
+        </Button>
       </form>
     </Container>
   );
