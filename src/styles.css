@@ -83,17 +83,30 @@ h3 {
 /* Charts */
 .charts-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
     margin-top: 20px;
 }
 
 .chart-card {
     background: #ffffff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.chart-card.large {
+    grid-column: span 2;
+    height: 400px;
+}
+
+.chart-card.medium {
+    height: 350px;
+}
+
+.chart-card.small {
+    height: 300px;
 }
 
 /* Typography Enhancements */

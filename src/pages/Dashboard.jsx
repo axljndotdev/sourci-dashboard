@@ -76,7 +76,7 @@ const Dashboard = () => {
 
       {data ? (
         <div className="charts-container">
-          <div className="chart-card">
+          <div className="chart-card large">
             <h3 style={{ color: "#000000" }}>Monthly Sales Performance</h3>
             <ResponsiveContainer width="100%" height={250}>
               <LineChart data={sampleSalesData}>
@@ -91,7 +91,7 @@ const Dashboard = () => {
             </ResponsiveContainer>
           </div>
 
-          <div className="chart-card">
+          <div className="chart-card medium">
             <h3 style={{ color: "#000000" }}>Sales by Category</h3>
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
@@ -158,7 +158,7 @@ const Dashboard = () => {
             </ResponsiveContainer>
           </div>
 
-          <div className="chart-card">
+          <div className="chart-card small">
             <h3 style={{ color: "#000000" }}>Client Growth</h3>
             <ResponsiveContainer width="100%" height={250}>
               <LineChart
