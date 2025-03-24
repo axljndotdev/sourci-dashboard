@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { db } from "../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
+import Logo from "../components/Logo";
 import { getAuth, signOut } from "firebase/auth";
 import {
   PieChart,
@@ -87,7 +88,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        <h2 style={{ color: "rgb(255 136 191)" }}>Admin Dashboard</h2>
+        <Logo />
         <button className="logout-btn" onClick={handleLogout}>
           LOGOUT
         </button>

@@ -218,6 +218,11 @@ h3 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-header svg {
+    margin: 0 auto;
 }
 
 .logout-container {
