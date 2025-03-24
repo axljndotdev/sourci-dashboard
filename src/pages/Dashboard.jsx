@@ -42,15 +42,18 @@ const Dashboard = () => {
   const auth = getAuth();
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
 
-    document.querySelectorAll('.data-card, .chart-card').forEach((el) => {
+    document.querySelectorAll(".data-card, .chart-card").forEach((el) => {
       observer.observe(el);
     });
 
@@ -89,27 +92,6 @@ const Dashboard = () => {
           LOGOUT
         </button>
       </div>
-
-      {data && (
-        <div className="data-grid">
-          <div className="data-card">
-            <h3>Total Sales</h3>
-            <p>${data.totalSales?.toLocaleString() || "0"}</p>
-          </div>
-          <div className="data-card">
-            <h3>Total Clients</h3>
-            <p>{data.totalClients || "0"}</p>
-          </div>
-          <div className="data-card">
-            <h3>Active Suppliers</h3>
-            <p>{data.activeSuppliers || "0"}</p>
-          </div>
-          <div className="data-card">
-            <h3>Monthly Growth</h3>
-            <p>{data.monthlyGrowth || "0"}%</p>
-          </div>
-        </div>
-      )}
 
       <div className="matrix-grid">
         <div className="matrix-card">
