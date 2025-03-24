@@ -203,14 +203,50 @@ h3 {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .matrix-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
-
     .charts-container {
         grid-template-columns: 1fr;
-        /* Stack charts */
+    }
+    .chart-card.large {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .matrix-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .dashboard-container {
+        width: 98%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .matrix-card {
+        padding: 15px;
+    }
+
+    .matrix-card h3 {
+        font-size: 16px;
+    }
+
+    .matrix-card p {
+        font-size: 24px;
+    }
+
+    .matrix-card span {
+        font-size: 12px;
+    }
+
+    .chart-card {
+        padding: 15px;
+        height: auto !important;
+        min-height: 300px;
     }
 }
 
