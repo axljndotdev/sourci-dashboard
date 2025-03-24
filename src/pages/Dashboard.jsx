@@ -111,6 +111,29 @@ const Dashboard = () => {
         </div>
       )}
 
+      <div className="matrix-grid">
+        <div className="matrix-card">
+          <h3>Industry Experience</h3>
+          <p>30+ Years</p>
+          <span>Combined sourcing expertise</span>
+        </div>
+        <div className="matrix-card">
+          <h3>Quality Focus</h3>
+          <p>100%</p>
+          <span>Quality inspection standards</span>
+        </div>
+        <div className="matrix-card">
+          <h3>Global Network</h3>
+          <p>500+</p>
+          <span>Verified manufacturers</span>
+        </div>
+        <div className="matrix-card">
+          <h3>Success Rate</h3>
+          <p>95%</p>
+          <span>Client satisfaction</span>
+        </div>
+      </div>
+
       {data ? (
         <div className="charts-container">
           <div className="chart-card large">
