@@ -42,6 +42,22 @@ const Dashboard = () => {
   const auth = getAuth();
 
   useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.data-card, .chart-card').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [data]);
+
+  useEffect(() => {
     const fetchData = async () => {
       const docRef = doc(db, "dashboardData", "jEcqx3fjw441059I66ra");
       const docSnap = await getDoc(docRef);
