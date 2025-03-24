@@ -11,7 +11,7 @@ body {
     width: 95%;
     max-width: 100%;
     margin: 40px auto;
-    background: white;
+    background: black;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -19,20 +19,23 @@ body {
 
 /* Headings */
 h2 {
-    color: #2B7EDE; /* Dark Blue */
+    color: #2B7EDE;
+    /* Dark Blue */
     font-size: 28px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 h3 {
-    color: #000000; /* Black */
+    color: #000000;
+    /* Black */
     font-weight: bold;
 }
 
 /* Buttons */
 .logout-btn {
-    background-color: #6A1B9A; /* Deep Purple */
+    background-color: #6A1B9A;
+    /* Deep Purple */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -65,13 +68,15 @@ h3 {
 .data-card h3 {
     margin: 0;
     font-size: 20px;
-    color: #54595F; /* Subtle Gray */
+    color: #54595F;
+    /* Subtle Gray */
 }
 
 .data-card p {
     font-size: 24px;
     font-weight: bold;
-    color: #58C3CD; /* Teal Highlight */
+    color: #58C3CD;
+    /* Teal Highlight */
     margin-top: 5px;
 }
 
@@ -93,21 +98,25 @@ h3 {
 
 /* Typography Enhancements */
 .primary-text {
-    color: #000000; /* Black */
+    color: #000000;
+    /* Black */
 }
 
 .accent-text {
-    color: #58C3CD; /* Teal */
+    color: #58C3CD;
+    /* Teal */
 }
 
 .secondary-text {
-    color: #F69AC9; /* Pink */
+    color: #F69AC9;
+    /* Pink */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .charts-container {
-        grid-template-columns: 1fr; /* Stack charts */
+        grid-template-columns: 1fr;
+        /* Stack charts */
     }
 }
 
@@ -119,11 +128,12 @@ h3 {
 }
 
 .logout-container {
-    margin-right: 20px; /* Move the logout button slightly to the left */
+    margin-right: 20px;
+    /* Move the logout button slightly to the left */
 }
 
 .logout-btn {
-    background-color: #4E4EF2;
+    background-color: #F69AC9;
     color: white;
     border: none;
     padding: 10px 16px;
@@ -135,5 +145,5 @@ h3 {
 }
 
 .logout-btn:hover {
-    background-color: #3D3DD1;
+    background-color: #58C3CD;
 }
